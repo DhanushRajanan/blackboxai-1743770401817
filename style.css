@@ -1,0 +1,178 @@
+/* Custom styles on top of Tailwind */
+
+/* Smooth scrolling and better font rendering */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* QR Reader styling */
+#qr-reader {
+    width: 100% !important;
+    border: none !important;
+    background: #f8fafc !important;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+#qr-reader__scan_region {
+    background: #f8fafc !important;
+}
+
+#qr-reader__scan_region > img {
+    display: none;
+}
+
+#qr-reader__dashboard {
+    padding: 1rem !important;
+    background: #f8fafc !important;
+    border: none !important;
+}
+
+#qr-reader__dashboard button {
+    padding: 0.5rem 1rem !important;
+    background: #2563eb !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+}
+
+#qr-reader__dashboard button:hover {
+    background: #1d4ed8 !important;
+}
+
+#qr-reader__camera_permission_button {
+    margin-bottom: 1rem !important;
+}
+
+/* QR Code container animations */
+#qr-code-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Status message animations */
+.status-message {
+    animation: slideIn 0.3s ease-out;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.status-success {
+    background-color: #059669;
+    color: white;
+}
+
+.status-error {
+    background-color: #dc2626;
+    color: white;
+}
+
+.status-info {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Scanned result card styling */
+.scanned-card {
+    animation: fadeIn 0.5s ease-out;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #f8fafc;
+}
+
+.scanned-card h3 {
+    color: #1f2937;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.scanned-card p {
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+/* Form input focus styles */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Button hover effects */
+button:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #2563eb;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* QR Code download button hover effect */
+#download-qr:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
